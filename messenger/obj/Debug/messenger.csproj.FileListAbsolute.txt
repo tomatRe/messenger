@@ -9,3 +9,14 @@ C:\Users\tonir\source\repos\messenger\messenger\obj\Debug\messenger.csproj.CoreC
 C:\Users\tonir\source\repos\messenger\messenger\obj\Debug\messenger.exe
 C:\Users\tonir\source\repos\messenger\messenger\obj\Debug\messenger.pdb
 C:\Users\tonir\source\repos\messenger\messenger\obj\Debug\messenger.Chat.resources
+C:\Users\angel\source\repos\messenger\messenger\bin\Debug\messenger.exe.config
+C:\Users\angel\source\repos\messenger\messenger\bin\Debug\messenger.exe
+C:\Users\angel\source\repos\messenger\messenger\bin\Debug\messenger.pdb
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.csprojAssemblyReference.cache
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.Chat.resources
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.Form1.resources
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.Properties.Resources.resources
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.csproj.GenerateResource.cache
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.csproj.CoreCompileInputs.cache
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.exe
+C:\Users\angel\source\repos\messenger\messenger\obj\Debug\messenger.pdb

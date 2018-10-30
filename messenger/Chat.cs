@@ -30,6 +30,15 @@ namespace messenger
 
             userList.Text = username;
             userList.Update();
+
+            if (isClient)
+            {
+                ConnectToHost();
+            }
+            else
+            {
+                CreateServer();
+            }
             
         }
 
@@ -53,7 +62,9 @@ namespace messenger
                 IPEndPoint direccion = new IPEndPoint(IPAddress.Parse(hostIp.Text), 1234);
 
                 socket1.Connect(direccion);
-                Console.WriteLine("Conectado con exito!");
+
+                string textToShow = "Conectando al servidor: " + hostIp.Text;
+                MessageBox.Show(textToShow, "Esperando host", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //------Chat------
 
@@ -66,10 +77,6 @@ namespace messenger
             {
                 MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-            string textToShow = "Conectando al servidor: " + hostIp.Text;
-            MessageBox.Show(textToShow, "Esperando host", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void CreateServer()
@@ -83,12 +90,13 @@ namespace messenger
 
             try
             {
+                string textToShow = "Servidor creado con la Ip: " + GetLocalIPAddress();
+                MessageBox.Show(textToShow, "Esperando clientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Esperando clientes", "Esperando clientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 socket1.Bind(direccion);
                 socket1.Listen(1);
                 Socket escuchar = socket1.Accept();
-
-                string textToShow = "Servidor creado con la Ip: " + GetLocalIPAddress();
-                MessageBox.Show(textToShow, "Esperando clientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //------Chat------
 
@@ -115,6 +123,11 @@ namespace messenger
                 }
             }
             throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
+
+        private void send_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -96,6 +96,7 @@
             this.send.TabIndex = 2;
             this.send.Text = "Enviar";
             this.send.UseVisualStyleBackColor = true;
+            this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // chatBox
             // 

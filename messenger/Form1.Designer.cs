@@ -185,9 +185,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 425);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(257, 13);
+            this.label4.Size = new System.Drawing.Size(130, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "He hecho esto en 2 horas si no funciona te jodes >.<";
+            this.label4.Text = "Si no funciona te jodes ;_;";
             // 
             // Form1
             // 

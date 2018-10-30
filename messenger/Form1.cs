@@ -24,7 +24,7 @@ namespace messenger
             
             if (username.TextLength == 0 || username.ToString() == "")
             {
-                MessageBox.Show("Tronco dame tu puto nombre ;_;", "Subnormal",
+                MessageBox.Show("Nombre de usuario no puede estar vacío (subnormal)", "Subnormal",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
