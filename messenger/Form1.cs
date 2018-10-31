@@ -37,7 +37,18 @@ namespace messenger
                 }
                 else
                 {
-                    Chat chat = new Chat(!server.Checked, hostIp.Text, username.Text);
+                    AsynchronousSocketListener asyncronous = new AsynchronousSocketListener();
+                    if (server.Checked)
+                    {
+                        asyncronous.StartListening();
+                    }
+
+                    string ip = hostIp.Text;
+                    if (ip == "")
+                    {
+                        ip = GetLocalIPAddress();
+                    }
+                    Chat chat = new Chat(!server.Checked, ip, username.Text, asyncronous);
                     chat.Show();
                 }
             }
@@ -56,67 +67,9 @@ namespace messenger
             throw new Exception("No network adapters with an IPv4 address in the system!");
         }
 
-        /*private void ConnectToHost()
+        private void Form1_Load(object sender, EventArgs e)
         {
-
-            try
-            {
-                Socket socket1 = new Socket(
-                AddressFamily.InterNetwork,
-                SocketType.Stream, ProtocolType.Tcp);
-
-                IPEndPoint direccion = new IPEndPoint(IPAddress.Parse(hostIp.Text), 1234);
-
-                socket1.Connect(direccion);
-                Console.WriteLine("Conectado con exito!");
-
-                //------Chat------
-
-                //------Chat------
-
-                socket1.Close();
-            }
-
-            catch (Exception e)
-            {
-                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-            string textToShow = "Conectando al servidor: " + hostIp.Text;
-            MessageBox.Show(textToShow, "Esperando host", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void CreateServer()
-        {
-
-            Socket socket1 = new Socket(
-            AddressFamily.InterNetwork,
-            SocketType.Stream, ProtocolType.Tcp);
-
-            IPEndPoint direccion = new IPEndPoint(IPAddress.Any, 1234);
-
-            try
-            {
-                socket1.Bind(direccion);
-                socket1.Listen(1);
-                Socket escuchar = socket1.Accept();
-
-                string textToShow = "Servidor creado con la Ip: " + GetLocalIPAddress();
-                MessageBox.Show(textToShow, "Esperando clientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //------Chat------
-
-                //------Chat------
-
-                socket1.Close();
-                escuchar.Close();
-            }
-
-            catch (Exception e)
-            {
-                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
     }
+
 }

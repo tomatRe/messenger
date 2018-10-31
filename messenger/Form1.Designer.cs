@@ -50,6 +50,7 @@
             // client
             // 
             this.client.AutoSize = true;
+            this.client.Checked = true;
             this.client.Location = new System.Drawing.Point(18, 18);
             this.client.Name = "client";
             this.client.Size = new System.Drawing.Size(57, 17);
@@ -65,7 +66,6 @@
             this.server.Name = "server";
             this.server.Size = new System.Drawing.Size(64, 17);
             this.server.TabIndex = 1;
-            this.server.TabStop = true;
             this.server.Text = "Servidor";
             this.server.UseVisualStyleBackColor = true;
             // 
@@ -203,11 +203,13 @@
             this.Controls.Add(this.DAWenger);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mierda de chat de 1DAW";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

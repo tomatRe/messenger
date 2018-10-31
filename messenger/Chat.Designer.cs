@@ -56,7 +56,7 @@
             this.userList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.userList.ForeColor = System.Drawing.SystemColors.Control;
             this.userList.FormattingEnabled = true;
-            this.userList.Location = new System.Drawing.Point(12, 54);
+            this.userList.Location = new System.Drawing.Point(6, 55);
             this.userList.Name = "userList";
             this.userList.Size = new System.Drawing.Size(149, 355);
             this.userList.TabIndex = 3;
@@ -120,6 +120,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Chat";
             this.Text = "Chat";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Chat_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
